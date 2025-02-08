@@ -10,10 +10,10 @@ class Cards:
 
     def init_cards(self):
         for i in range(13):
-            self.cards.append('images/cards/spades_'+str((i + 1)))
-            self.cards.append('images/cards/hearts_'+str((i + 1)))
-            self.cards.append('images/cards/clubs_'+str((i + 1)))
-            self.cards.append('images/cards/diamonds_'+str((i + 1)))
+            self.cards.append('images/cards/spades_'+str((i + 1))+'.png')
+            self.cards.append('images/cards/hearts_'+str((i + 1))+'.png')
+            self.cards.append('images/cards/clubs_'+str((i + 1))+'.png')
+            self.cards.append('images/cards/diamonds_'+str((i + 1))+'.png')
 
     def shuffle_cards(self):
         random.shuffle(self.cards)
@@ -23,3 +23,6 @@ class Cards:
         self.cards[index], self.cards[-1] = self.cards[-1], self.cards[index]
         element = self.cards.pop()
         return element
+    
+    def get_back(self):
+        return 'images/cards/back.png'
