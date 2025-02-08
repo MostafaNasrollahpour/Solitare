@@ -54,3 +54,39 @@ def init_left_frame(window: Tk, cards: Cards):
     card3 = Button(top_left, width=WIDTH, height=HEIGHT, image=card3_img)
     card3.grid(row=0, column=3, padx=(5, 5), pady=(10, 5))
 
+
+def init_right_frame(window: Tk, cards: Cards):
+    #Create frames using grid layout
+    top_right = Frame(window, bg='', width=500, height=110)  # Set explicit size
+    top_right.grid(row=0, column=4, columnspan=4, padx=(220, 0))
+
+    WIDTH = 80
+    HEIGHT = 120
+
+    # Store references to the images
+    top_right.images = []
+
+    # Add padding to spades
+    spades_img = ImageTk.PhotoImage(Image.open(cards.get_spades()).resize((WIDTH, HEIGHT)))
+    top_right.images.append(spades_img)  # Keep reference
+    spades = Button(top_right, width=WIDTH, height=HEIGHT, image=spades_img)
+    spades.grid(row=0, column=0, padx=(10, 5), pady=(10, 5))
+
+    # Add padding to heart
+    heart_img = ImageTk.PhotoImage(Image.open(cards.get_heart()).resize((WIDTH, HEIGHT)))
+    top_right.images.append(heart_img)  # Keep reference
+    heart = Button(top_right, width=WIDTH, height=HEIGHT, image=heart_img)
+    heart.grid(row=0, column=1, padx=(5, 5), pady=(10, 5))
+
+    # Add padding to clubs
+    clubs_img = ImageTk.PhotoImage(Image.open(cards.get_clubs()).resize((WIDTH, HEIGHT)))
+    top_right.images.append(clubs_img)  # Keep reference
+    clubs = Button(top_right, width=WIDTH, height=HEIGHT, image=clubs_img)
+    clubs.grid(row=0, column=2, padx=(5, 5), pady=(10, 5))
+
+    # Add padding to diamonds
+    diamonds_img = ImageTk.PhotoImage(Image.open(cards.get_diamonds()).resize((WIDTH, HEIGHT)))
+    top_right.images.append(diamonds_img)  # Keep reference
+    diamonds = Button(top_right, width=WIDTH, height=HEIGHT, image=diamonds_img)
+    diamonds.grid(row=0, column=3, padx=(5, 5), pady=(10, 5))
+    
