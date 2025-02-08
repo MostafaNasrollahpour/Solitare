@@ -26,3 +26,15 @@ class Cards:
     
     def get_back(self):
         return 'images/cards/back.png'
+    
+    def get_spades(self):
+        return 'images/spades-suit.png'
+
+    def get_heart(self):
+        return 'images/heart-suit.png'
+    
+    def get_clubs(self):
+        return 'images/clubs-suit.png'
+    
+    def get_diamonds(self):
+        return 'images/diamonds-suit.png'
