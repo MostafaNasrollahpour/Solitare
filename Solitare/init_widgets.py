@@ -89,4 +89,7 @@ def init_right_frame(window: Tk, cards: Cards):
     top_right.images.append(diamonds_img)  # Keep reference
     diamonds = Button(top_right, width=WIDTH, height=HEIGHT, image=diamonds_img)
     diamonds.grid(row=0, column=3, padx=(5, 5), pady=(10, 5))
+
+
+
     
